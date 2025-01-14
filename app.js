@@ -21,12 +21,19 @@ const PORT = process.env.PORT || 8085;
 //   useUnifiedTopology: true,
 // });
 // Consolidate CORS middleware configuration
+// app.use(
+//   cors({
+//     origin: ["http://localhost:5173", "http://localhost:5174"], // Allow both 5173 and 5174
+//     methods: ["GET", "POST"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true, // Allow credentials if needed
+//   })
+// );
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"], // Allow both 5173 and 5174
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, // Allow credentials if needed
+    origin: "https://your-netlify-domain.netlify.app", // Replace with your Netlify domain
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 // Enable CORS
