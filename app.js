@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 8085;
 // );
 app.use(
   cors({
-    origin: "https://your-netlify-domain.netlify.app", // Replace with your Netlify domain
+    origin: "https://gorgeous-travesseiro-82dd31.netlify.app/", // Replace with your Netlify domain
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
